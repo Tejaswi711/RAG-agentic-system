@@ -1,0 +1,266 @@
+2025-05-10 14:26:36,997 - INFO - Fetching documents from 2025-05-03 to 2025-05-10
+2025-05-10 14:26:37,846 - ERROR - Pipeline failed: unpack requires a buffer of 4 bytes
+Traceback (most recent call last):
+  File "D:\RAG Agentic System with Async Tools\pipeline.py", line 29, in run_pipeline
+    pool = await aiomysql.create_pool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 29, in _create_pool
+    await pool._fill_free_pool(False)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 182, in _fill_free_pool
+    conn = await connect(echo=self._echo, loop=self._loop,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 75, in _connect
+    await conn._connect()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 539, in _connect
+    await self._get_server_information()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 1058, in _get_server_information
+    self.server_thread_id = struct.unpack('<I', data[i:i + 4])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack requires a buffer of 4 bytes
+2025-05-10 14:29:57,346 - INFO - Fetching documents from 2025-05-03 to 2025-05-10
+2025-05-10 14:30:00,033 - ERROR - Pipeline failed: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "D:\RAG Agentic System with Async Tools\pipeline.py", line 29, in run_pipeline
+    pool = await aiomysql.create_pool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 29, in _create_pool
+    await pool._fill_free_pool(False)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 182, in _fill_free_pool
+    conn = await connect(echo=self._echo, loop=self._loop,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 75, in _connect
+    await conn._connect()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 540, in _connect
+    await self._request_authentication()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 855, in _request_authentication
+    await self._process_auth(plugin_name, auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 875, in _process_auth
+    await self.caching_sha2_password_auth(auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 989, in caching_sha2_password_auth
+    pkt = await self._read_packet()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 652, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+2025-05-10 14:36:04,025 - INFO - Fetching documents from 2025-05-03 to 2025-05-10
+2025-05-10 14:36:04,050 - ERROR - Pipeline failed: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "D:\RAG Agentic System with Async Tools\pipeline.py", line 29, in run_pipeline
+    pool = await aiomysql.create_pool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 29, in _create_pool
+    await pool._fill_free_pool(False)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 182, in _fill_free_pool
+    conn = await connect(echo=self._echo, loop=self._loop,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 75, in _connect
+    await conn._connect()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 540, in _connect
+    await self._request_authentication()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 855, in _request_authentication
+    await self._process_auth(plugin_name, auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 875, in _process_auth
+    await self.caching_sha2_password_auth(auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 989, in caching_sha2_password_auth
+    pkt = await self._read_packet()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 652, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+2025-05-10 14:39:57,019 - INFO - Fetching documents from 2025-05-03 to 2025-05-10
+2025-05-10 14:39:57,192 - ERROR - Pipeline failed: (1049, "Unknown database 'your_database_name'")
+Traceback (most recent call last):
+  File "D:\RAG Agentic System with Async Tools\pipeline.py", line 29, in run_pipeline
+    pool = await aiomysql.create_pool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 29, in _create_pool
+    await pool._fill_free_pool(False)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 182, in _fill_free_pool
+    conn = await connect(echo=self._echo, loop=self._loop,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 75, in _connect
+    await conn._connect()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 540, in _connect
+    await self._request_authentication()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 865, in _request_authentication
+    await self.caching_sha2_password_auth(auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 989, in caching_sha2_password_auth
+    pkt = await self._read_packet()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 652, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1049, "Unknown database 'your_database_name'")
+2025-05-10 14:42:21,164 - INFO - Fetching documents from 2025-05-03 to 2025-05-10
+2025-05-10 14:42:21,211 - ERROR - Pipeline failed: (1044, "Access denied for user 'fedreg_user'@'localhost' to database 'fedreg'")
+Traceback (most recent call last):
+  File "D:\RAG Agentic System with Async Tools\pipeline.py", line 29, in run_pipeline
+    pool = await aiomysql.create_pool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 29, in _create_pool
+    await pool._fill_free_pool(False)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 182, in _fill_free_pool
+    conn = await connect(echo=self._echo, loop=self._loop,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 75, in _connect
+    await conn._connect()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 540, in _connect
+    await self._request_authentication()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 865, in _request_authentication
+    await self.caching_sha2_password_auth(auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 952, in caching_sha2_password_auth
+    pkt = await self._read_packet()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 652, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1044, "Access denied for user 'fedreg_user'@'localhost' to database 'fedreg'")
+2025-05-10 15:05:58,132 - INFO - Fetching documents from 2025-05-03 to 2025-05-10
+2025-05-10 15:05:58,848 - ERROR - Pipeline failed: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "D:\RAG Agentic System with Async Tools\pipeline.py", line 29, in run_pipeline
+    pool = await aiomysql.create_pool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 29, in _create_pool
+    await pool._fill_free_pool(False)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 182, in _fill_free_pool
+    conn = await connect(echo=self._echo, loop=self._loop,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 75, in _connect
+    await conn._connect()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 540, in _connect
+    await self._request_authentication()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 865, in _request_authentication
+    await self.caching_sha2_password_auth(auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 989, in caching_sha2_password_auth
+    pkt = await self._read_packet()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 652, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+2025-05-10 15:11:35,707 - INFO - Fetching documents from 2025-05-03 to 2025-05-10
+2025-05-10 15:11:35,823 - ERROR - Pipeline failed: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "D:\RAG Agentic System with Async Tools\pipeline.py", line 29, in run_pipeline
+    pool = await aiomysql.create_pool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 29, in _create_pool
+    await pool._fill_free_pool(False)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 182, in _fill_free_pool
+    conn = await connect(echo=self._echo, loop=self._loop,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 75, in _connect
+    await conn._connect()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 540, in _connect
+    await self._request_authentication()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 865, in _request_authentication
+    await self.caching_sha2_password_auth(auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 989, in caching_sha2_password_auth
+    pkt = await self._read_packet()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 652, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+2025-05-11 11:12:35,436 - INFO - Fetching documents from 2025-05-04 to 2025-05-11
+2025-05-11 11:12:38,144 - ERROR - Pipeline failed: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "D:\RAG Agentic System with Async Tools\pipeline.py", line 29, in run_pipeline
+    pool = await aiomysql.create_pool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 29, in _create_pool
+    await pool._fill_free_pool(False)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 182, in _fill_free_pool
+    conn = await connect(echo=self._echo, loop=self._loop,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 75, in _connect
+    await conn._connect()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 540, in _connect
+    await self._request_authentication()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 865, in _request_authentication
+    await self.caching_sha2_password_auth(auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 989, in caching_sha2_password_auth
+    pkt = await self._read_packet()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 652, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+2025-05-11 11:26:19,364 - INFO - Fetching documents from 2025-05-04 to 2025-05-11
+2025-05-11 11:26:20,332 - ERROR - Pipeline failed: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "D:\RAG Agentic System with Async Tools\pipeline.py", line 29, in run_pipeline
+    pool = await aiomysql.create_pool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 29, in _create_pool
+    await pool._fill_free_pool(False)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 182, in _fill_free_pool
+    conn = await connect(echo=self._echo, loop=self._loop,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 75, in _connect
+    await conn._connect()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 540, in _connect
+    await self._request_authentication()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 865, in _request_authentication
+    await self.caching_sha2_password_auth(auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 989, in caching_sha2_password_auth
+    pkt = await self._read_packet()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 652, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+2025-05-11 11:32:01,494 - INFO - Fetching documents from 2025-05-04 to 2025-05-11
+2025-05-11 11:32:01,634 - ERROR - Pipeline failed: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "D:\RAG Agentic System with Async Tools\pipeline.py", line 29, in run_pipeline
+    pool = await aiomysql.create_pool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 29, in _create_pool
+    await pool._fill_free_pool(False)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\pool.py", line 182, in _fill_free_pool
+    conn = await connect(echo=self._echo, loop=self._loop,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 75, in _connect
+    await conn._connect()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 540, in _connect
+    await self._request_authentication()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 865, in _request_authentication
+    await self.caching_sha2_password_auth(auth_packet)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 989, in caching_sha2_password_auth
+    pkt = await self._read_packet()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hello\anaconda\Lib\site-packages\aiomysql\connection.py", line 652, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Hello\anaconda\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'fedreg_user'@'localhost' (using password: YES)")
